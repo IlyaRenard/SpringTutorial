@@ -1,8 +1,11 @@
 package com.gavrilik.springtutorial;
 
-public class RockMusic implements Music {
+import org.springframework.stereotype.Component;
+
+@Component
+public class RockMusic implements Genre {
     @Override
-    public String getSong() {
+    public String getName() {
         return "ACDC - TNT";
     }
 }

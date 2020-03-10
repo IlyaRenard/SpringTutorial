@@ -1,16 +1,16 @@
 package com.gavrilik.springtutorial;
 
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@ComponentScan("com.gavrilik.springtutorial")
 @PropertySource("classpath:musicPlayer.properties")
+@ComponentScan("com.gavrilik.springtutorial")
 public class Config {
 
+/*
 
     @Bean
     public ClassicalMusic classicalMusic(){
@@ -27,6 +27,7 @@ public class Config {
     public MusicPlayer musicPlayer() {
         return new MusicPlayer(rockMusic(), classicalMusic());
     }
+*/
 
 
 }

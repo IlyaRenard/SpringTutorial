@@ -1,8 +1,12 @@
 package com.gavrilik.springtutorial;
 
-public class ClassicalMusic implements Music{
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class ClassicalMusic implements Genre {
     @Override
-    public String getSong() {
+    public String getName() {
         return "Hungarian Rhapsody";
     }
 }

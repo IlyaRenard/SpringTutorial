@@ -1,8 +1,9 @@
 package com.gavrilik.springtutorial;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MusicPlayer {
 
     @Value("${musicPlayer.name}")
@@ -19,16 +20,16 @@ public class MusicPlayer {
         return volume;
     }
 
-    private Music music1;
-    private Music music2;
+    private ClassicalMusic classicalMusic;
+    private RockMusic rockMusic;
 
-    public MusicPlayer(@Qualifier("rockMusic") Music music1,
-                       @Qualifier("classicalMusic") Music music2) {
-        this.music1 = music1;
-        this.music2 = music2;
+    public MusicPlayer(ClassicalMusic classicalMusic,
+                       RockMusic rockMusic) {
+        this.classicalMusic = classicalMusic;
+        this.rockMusic = rockMusic;
     }
 
     public String playMusic() {
-        return "Playing: " + music1.getSong() + ", " + music2.getSong();
+        return "Playing: " + classicalMusic.getName() + ", " + rockMusic.getName();
     }
 }

@@ -12,7 +12,7 @@ public class XmlConfig {
         );
 
         FirstBean firstBean = context.getBean("firstBean", FirstBean.class);
-        System.out.println(firstBean.getNama());
+        System.out.println(firstBean.getName());
 
         //Music music = context.getBean("musicBean", Music.class);
         //MusicPlayer musicPlayer = new MusicPlayer(music);

@@ -16,10 +16,8 @@ public class JavaConfig {
 
         ClassicalMusic classicalMusic = context.getBean("classicalMusic", ClassicalMusic.class);
 
-
-        classicalMusic.getSong();
-
-        context.close();
+        System.out.println(musicPlayer.playMusic());
+        System.out.println(classicalMusic.getName());
 
 
     }
